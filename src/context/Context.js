@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 import React, { createContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { message } from "antd";
 
 export const DataContext = createContext();
@@ -12,7 +12,7 @@ export const DataProvider = (props) => {
    const [currentId, setCurrentId] = useState(null);
    const [fetchStatus, setFetchStatus] = useState(true);
    const [search, setSearch] = useState("");
-   let history = useNavigate();
+   let history = useHistory();
 
    const [inputMovie, setInputMovie] = useState({
       title: "",

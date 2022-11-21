@@ -1,9 +1,10 @@
+import { Layout } from "antd";
 import Cookies from "js-cookie";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 
-export default function Layout(props) {
+export default function LayoutComponent(props) {
    const { Content } = Layout;
 
    return (

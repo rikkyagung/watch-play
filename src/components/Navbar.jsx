@@ -1,10 +1,10 @@
 import React from "react";
 import { Layout, Menu } from "antd";
-import {  NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
 
 export default function Navbar() {
-   let history = useNavigate();
+   let history = useHistory();
    const { Header } = Layout;
 
    return (
