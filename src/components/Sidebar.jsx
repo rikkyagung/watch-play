@@ -7,7 +7,7 @@ import {
    SettingOutlined,
    DatabaseOutlined,
 } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
    const { Sider } = Layout;
@@ -17,18 +17,26 @@ export default function Sidebar() {
       <Sider width={200} className="site-layout-background">
          <Menu mode="inline" style={{ height: "100%", borderRight: 0 }}>
             <Menu.Item key="1" icon={<DashboardOutlined />}>
-               <Link to={"/dashboard"}>Dashboard</Link>
+               <NavLink activeClassName="sideSelected" to={"/dashboard"}>
+                  Dashboard
+               </NavLink>
             </Menu.Item>
             <SubMenu key="sub1" icon={<DatabaseOutlined />} title="Manage Data">
                <Menu.Item key="2" icon={<VideoCameraOutlined />}>
-                  <Link to={"/movie-list"}>Movie</Link>
+                  <NavLink activeClassName="sideSelected" to={"/movie-list"}>
+                     Movie
+                  </NavLink>
                </Menu.Item>
                <Menu.Item key="3" icon={<PlayCircleOutlined />}>
-                  <Link to={"/game-list"}>Game</Link>
+                  <NavLink activeClassName="sideSelected" to={"/game-list"}>
+                     Game
+                  </NavLink>
                </Menu.Item>
             </SubMenu>
             <Menu.Item key="4" icon={<SettingOutlined />}>
-               <Link to={"/change-password"}>Change Password</Link>
+               <NavLink activeClassName="sideSelected" to={"/change-password"}>
+                  Change Password
+               </NavLink>
             </Menu.Item>
          </Menu>
       </Sider>

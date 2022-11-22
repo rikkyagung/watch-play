@@ -20,7 +20,7 @@ import Login from "../pages/Login";
 export default function Path() {
    const RouteLogin = ({ ...props }) => {
       if (Cookies.get("token") !== undefined) {
-         return <Redirect to={"/home"} />;
+         return <Redirect to={"/"} />;
       } else if (Cookies.get("token") === undefined) {
          return <Route {...props} />;
       }
@@ -28,7 +28,7 @@ export default function Path() {
 
    const RouteAuth = ({ ...props }) => {
       if (Cookies.get("token") === undefined) {
-         return <Redirect to={"/home"} />;
+         return <Redirect to={"/"} />;
       } else if (Cookies.get("token") !== undefined) {
          return <Route {...props} />;
       }
@@ -37,7 +37,7 @@ export default function Path() {
    return (
       <DataProvider>
          <Switch>
-            <Route exact path="/">
+            <Route exact path={"/"}>
                <LayoutComponent>
                   <Home />
                </LayoutComponent>

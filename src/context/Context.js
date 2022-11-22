@@ -72,7 +72,7 @@ export const DataProvider = (props) => {
 
             message.success(`Hello ${user}!`);
             Cookies.set("token", token, { expires: 1 });
-            history.push("/home");
+            history.push("/");
 
             setInputLogin({
                email: "",
@@ -101,7 +101,7 @@ export const DataProvider = (props) => {
       axios
          .request(options)
          .then(() => {
-            history.push("/home");
+            history.push("/");
             message.success("Success Change Password");
 
             setInputChangePassword({
@@ -475,7 +475,7 @@ export const DataProvider = (props) => {
       const options = {
          method: "PUT",
          url: `${process.env.REACT_APP_DATA_GAME}/${param}`,
-         params: {
+         data: {
             name: inputGame.name,
             genre: inputGame.genre,
             platform: inputGame.platform,

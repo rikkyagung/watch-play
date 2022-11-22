@@ -1,10 +1,11 @@
 import React from "react";
 import { Layout, Menu } from "antd";
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink, useHistory, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 
 export default function Navbar() {
    let history = useHistory();
+   const location = useLocation();
    const { Header } = Layout;
 
    return (
@@ -18,7 +19,7 @@ export default function Navbar() {
                className="logo"
                style={{ position: "absolute", left: "-40px", top: "-40px" }}
             >
-               <NavLink to={"/home"}>
+               <NavLink to={"/"}>
                   <img
                      src={require("../assets/img/WP-01.webp")}
                      width={150}
@@ -27,7 +28,10 @@ export default function Navbar() {
                </NavLink>
             </Menu.Item>
             <Menu.Item key={"2"}>
-               <NavLink activeClassName="selected" to={"/home"}>
+               <NavLink
+                  className={location.pathname === "/" ? "selected" : ""}
+                  to={"/"}
+               >
                   Home
                </NavLink>
             </Menu.Item>
