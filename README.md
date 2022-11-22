@@ -18,7 +18,7 @@
 
 ## About the Project
 
-![preview-image.](/src/assets/WATCH&PLAY-03.webp "Preview Image.")
+![preview-image.](/src/assets/img/WATCH&PLAY-03.webp "Preview Image.")
 
 Simple weather app built with React Hooks and Tailwind CSS. This app can display the current weather based on your input search (default value = Jakarta), and it also has dark and light modes. Data obtained by API (weatherapi.com).
 
